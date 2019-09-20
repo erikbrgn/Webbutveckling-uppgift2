@@ -5,7 +5,7 @@ var watch = require('gulp-watch');
 
 var paths = {
     styles: {
-        src: 'src/scss/**/*.scss',
+        src: 'src/scss/*.scss',
         dest: 'assets/css/'
     },
     scripts: {

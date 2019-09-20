@@ -495,3 +495,22 @@ body {
   width: 100%;
   height: 50px;
   background-color: #ffcc33; }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: #222222; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  background-color: #e50050; }
+
+.col {
+  position: relative;
+  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  background-color: #ffcc33; }
