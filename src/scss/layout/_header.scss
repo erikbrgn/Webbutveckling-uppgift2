@@ -1,3 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.header {
+  height: 40px;
+  display: flex;
+  background-color: #eb7070;
+}
+
+.brand-title {
+  font-size: 1.2rem;
+  color: $brand-title-color;
+  font-weight: bold;
+}

@@ -1,19 +1,10 @@
 // This file is for defining the grid properties
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  background-color: #222222;
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -20px;
   background-color: #e50050;
 }
-
 .col {
   position: relative;
   width: 100%;
@@ -21,7 +12,7 @@
   max-width: 100%;
   background-color: #ffcc33;
 
-  @include breakpoint('medium') {
+  @include media(">medium", "<=large") {
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }

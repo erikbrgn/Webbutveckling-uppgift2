@@ -423,18 +423,21 @@ html {
  * Basic styles for links
  */
 a {
-  color: #e50050;
+  color: #eb7070;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #222222;
+    color: #666666;
     text-decoration: underline; }
 
 /**
  * Basic typography style for copy text
  */
 body {
-  color: #222222;
+  color: #666666;
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0; }
 
 /**
  * Clear inner floats
@@ -491,16 +494,20 @@ body {
   position: absolute;
   width: 1px; }
 
+.header {
+  height: 40px;
+  display: flex;
+  background-color: #eb7070; }
+
+.brand-title {
+  font-size: 1.2rem;
+  color: #64e291;
+  font-weight: bold; }
+
 .test {
   width: 100%;
   height: 50px;
   background-color: #ffcc33; }
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  background-color: #222222; }
 
 .row {
   display: flex;
@@ -514,3 +521,13 @@ body {
   flex: 0 0 100%;
   max-width: 100%;
   background-color: #ffcc33; }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .col {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%; } }
+
+.nav {
+  position: sticky;
+  height: 75px;
+  width: 100%; }
