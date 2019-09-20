@@ -1,0 +1,29 @@
+{
+  "name": "webbutveckling-uppgift2",
+  "version": "0.0.1",
+  "description": "Uppgift 2 i Webbutveckling",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -o -p 8080 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikbrgn/Webbutveckling-uppgift2.git"
+  },
+  "author": "Erik Berggren & Axel Ungewitter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erikbrgn/Webbutveckling-uppgift2/issues"
+  },
+  "homepage": "https://github.com/erikbrgn/Webbutveckling-uppgift2#readme",
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "sass": "^1.22.12"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1"
+  }
+}
