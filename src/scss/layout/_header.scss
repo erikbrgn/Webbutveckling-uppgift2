@@ -3,13 +3,14 @@
 // -----------------------------------------------------------------------------
 
 .header {
-  height: 40px;
+  height: 400px;
   display: flex;
   background-color: #eb7070;
 }
 
 .brand-title {
-  font-size: 1.2rem;
-  color: $brand-title-color;
+  font-family: 'Vibes', cursive;
+  font-size: 3rem;
+  color: $orange;
   font-weight: bold;
 }

@@ -40,7 +40,15 @@ $mid-grey: rgb(153, 153, 153) !default;
 $dark-grey: rgb(68, 68, 68) !default;
 
 
+// color scheme
+$green: #64e291 !default;
+$red: #eb7070;
+$orange: #fec771;
+$yellow: #e6e56c;
 
+// box-shadows
+$shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+$shadow-pro-max: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 
 /// Container's maximum width

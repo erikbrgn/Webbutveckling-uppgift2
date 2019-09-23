@@ -1,5 +1,86 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the navigation of the site/application.
+// -----------------------------------------------------------------------------
 .nav {
+  display: flex;
+  position: -webkit-sticky; /* Safari */
     position: sticky;
-    height: 75px;
-    width: 100%;
+    top: 0;
+  height: 75px;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #fafafa;
+  margin-bottom: -20px;
+
+
+  .brand-container {
+
+    margin-right: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .link-container {
+    margin-right: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .menu {
+        list-style: none;
+        display: flex;
+
+        >li {
+            align-items: center;
+            margin-left: 20px;
+
+          .dropdown-container {
+            position: absolute;
+            display: none;
+            list-style: none;
+            box-shadow: $shadow;
+            border-top: 2px solid $orange;
+            padding: 0px 10px;
+
+
+          }
+          &:hover .dropdown-container {
+            display: block;
+            background-color: #fafafa;
+
+            > ul {
+                display: initial;
+            }
+          }
+        }
+      }
+  }
+
+}
+.menu a {
+
+    color: $text-color;
+    &:hover {
+        text-decoration: none;
+        color: $red;
+
+}
+.menu > li > a {
+
+    color: $text-color;
+
+    &:after {
+        content: "";
+        display: block;
+        border-bottom: 2px solid $orange;
+        transform: scaleX(0);
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $red;
+
+        &:after {
+        transform: scaleX(1);
+        }
 }

@@ -15,6 +15,10 @@ html {
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
+* {
+  -webkit-transition: all 0.5s;
+}
+
 *,
 *::before,
 *::after {
@@ -30,7 +34,11 @@ a {
 
   @include on-event {
     color: $text-color;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
