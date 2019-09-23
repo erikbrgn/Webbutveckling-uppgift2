@@ -603,6 +603,12 @@ p {
           .nav .link-container .menu > li:hover .dropdown-container > ul {
             display: initial; }
 
+.menu a {
+  color: #666666; }
+  .menu a:hover {
+    text-decoration: none;
+    color: #eb7070; }
+
 .menu > li > a {
   color: #666666; }
   .menu > li > a:after {
