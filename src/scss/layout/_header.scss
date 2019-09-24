@@ -5,13 +5,15 @@
 .header {
   height: 400px;
   display: flex;
-  background-image: linear-gradient(90deg, #eb7070, #fec771);
+  background-image: linear-gradient(90deg, $red 0%, $orange  100%);
 }
 
 .header-text{
   height: 100%;
   width: 70%;
-  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .header-text h1 {
@@ -30,14 +32,15 @@
 }
 
 .header-logo {
+  display: flex;
   height: 100%;
-  width: 30%;
+  width: 15%;
+  align-items: center;
 }
 
 .logo {
   display: block;
-  width:50%;
-  padding-top: 25%;
+  width:100%;
   margin-left:auto;
   margin-right:auto;
 }

@@ -21,6 +21,7 @@
   .side {
     grid-column: col-start 7 / span 5;
     grid-row: 3 / 5;
+    background-color: #F7F9F9;
   }
 }
 
@@ -29,7 +30,8 @@
   .section {
     grid-column: col-start / span 3;
     grid-row: 3 / 5;
-    padding:5px;
+    padding:15px;
+    background-color: #F7F9F9;
   }
 
   .main {
@@ -40,5 +42,9 @@
   .side {
     grid-column: col-start 10 / span 3;
     grid-row: 3 / 5;
+    background-color: #F7F9F9;
+    box-shadow: $shadow;
+    margin-right: 15px;
+    padding:5px 0 5px 10px;
   }
 }
