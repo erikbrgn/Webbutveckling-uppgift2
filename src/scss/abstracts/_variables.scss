@@ -50,11 +50,17 @@ $yellow: #e6e56c;
 $shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
 $shadow-pro-max: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+// animation transition
+
+$sexy: all 255ms cubic-bezier(0.29, 0.19, 0.405, 1);
+
 
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
 
+
+// animation
 
 
 
@@ -64,9 +70,9 @@ $max-width: 1180px !default;
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
   'small': 320px,
-  'medium': 768px,
+  'medium': 800px,
   'large': 1024px,
-) !default;
+);
 
 
 

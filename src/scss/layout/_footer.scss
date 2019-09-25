@@ -6,18 +6,22 @@
   display: flex;
   background-image: linear-gradient(90deg, #eb7070, #fec771);
   padding: 0 20px;
-  font-size: 70%
+  font-size: 70%;
+
+  p {
+    color: #fff;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  }
 }
 
 .contact-footer {
   display:flex;
-  justify-content: left;
+  align-items: center;
   flex-direction: column;
 }
 
 .copyright-footer {
   display:flex;
-  justify-content: right;
-  flex-direction: column;
+  align-items: center;
   margin-left:auto;
 }

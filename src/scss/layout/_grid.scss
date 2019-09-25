@@ -12,14 +12,29 @@
   grid-column: col-start / span 12;
 }
 
+.main {
+  padding: 15px;
+}
+.side {
+  background-color: #F7F9F9;
+  box-shadow: $shadow;
+  margin-right: 15px;
+  padding: 15px 0 15px 15px;
+}
+
+
+
 @include media(">medium", "<=large") {
+  .section {
+    display: none;
+  }
   .main {
     grid-column: col-start / span 7;
     grid-row: 3 / 5;
   }
 
   .side {
-    grid-column: col-start 7 / span 5;
+    grid-column: col-start 8 / span 5;
     grid-row: 3 / 5;
     background-color: #F7F9F9;
   }
@@ -42,9 +57,5 @@
   .side {
     grid-column: col-start 10 / span 3;
     grid-row: 3 / 5;
-    background-color: #F7F9F9;
-    box-shadow: $shadow;
-    margin-right: 15px;
-    padding:5px 0 5px 10px;
   }
 }
