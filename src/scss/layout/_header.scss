@@ -5,10 +5,10 @@
 .header {
   height: 400px;
   display: flex;
-  background-image: linear-gradient(90deg, $red 0%, $orange  100%);
+  background-image: linear-gradient(90deg, $red 0%, $orange 100%);
 }
 
-.header-text{
+.header-text {
   height: 100%;
   width: 70%;
   display: flex;
@@ -17,17 +17,17 @@
 }
 
 .header-text h1 {
-    text-align: center;
-    color:white;
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  text-align: center;
+  color: white;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 .header-text h2 {
-    text-align: center;
-    color:white;
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  text-align: center;
+  color: white;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 .header-logo {
@@ -39,15 +39,51 @@
 
 .logo {
   display: block;
-  width:100%;
-  margin-left:auto;
-  margin-right:auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .brand-title {
   font-family: 'Vibes', cursive;
   font-size: 3rem;
   color: $orange;
-  font-weight: bold;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+@include media ('<=large') {
+  .header-text h1 {
+    font-size: 2.2rem;
+  }
 }
 
+@include media('<=medium') {
+  .header {
+    padding: 0 20px;
+    flex-wrap: wrap;
+    height: 300px;
+    
+  }
+  .header-text {
+    width: 100%;
+    height: auto;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+  .header-logo {
+    width: 20%;
+    margin: 0 auto;
+    height: auto;
+    display: unset;
+  }
+
+  .brand-title {
+    font-size: 2.4rem;
+    margin-top: 5px;
+  }
+}

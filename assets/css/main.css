@@ -561,7 +561,33 @@ p {
   font-family: 'Vibes', cursive;
   font-size: 3rem;
   color: #fec771;
-  font-weight: bold; }
+  font-weight: 900;
+  letter-spacing: 3px; }
+
+@media (max-width: 1024px) {
+  .header-text h1 {
+    font-size: 2.2rem; } }
+
+@media (max-width: 800px) {
+  .header {
+    padding: 0 20px;
+    flex-wrap: wrap;
+    height: 300px; }
+  .header-text {
+    width: 100%;
+    height: auto; }
+    .header-text h1 {
+      font-size: 1.5rem; }
+    .header-text h2 {
+      font-size: 1.2rem; }
+  .header-logo {
+    width: 20%;
+    margin: 0 auto;
+    height: auto;
+    display: unset; }
+  .brand-title {
+    font-size: 2.4rem;
+    margin-top: 5px; } }
 
 .footer {
   display: flex;
@@ -582,6 +608,19 @@ p {
   align-items: center;
   margin-left: auto; }
 
+@media (max-width: 800px) {
+  .footer {
+    display: block; }
+  .contact-footer {
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto; }
+  .copyright-footer {
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    display: inherit; } }
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
@@ -592,13 +631,16 @@ p {
 .wrapper > * {
   grid-column: col-start / span 12; }
 
+.section {
+  display: none; }
+
 .main {
   padding: 15px; }
 
 .side {
   background-color: #F7F9F9;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
-  margin-right: 15px;
+  margin: 0px 15px;
   padding: 15px 0 15px 15px; }
 
 @media (min-width: 801px) and (max-width: 1024px) {
@@ -614,6 +656,7 @@ p {
 
 @media (min-width: 1025px) {
   .section {
+    display: block;
     grid-column: col-start / span 3;
     grid-row: 3 / 5;
     padding: 15px;
