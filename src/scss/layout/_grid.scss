@@ -22,7 +22,7 @@
   background-color: #F7F9F9;
   box-shadow: $shadow;
   margin: 0px 15px;
-  padding: 15px 0 15px 15px;
+  padding: 15px 15px 15px 15px;
 }
 
 @include media(">medium", "<=large") {

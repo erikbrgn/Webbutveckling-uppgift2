@@ -641,7 +641,7 @@ p {
   background-color: #F7F9F9;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   margin: 0px 15px;
-  padding: 15px 0 15px 15px; }
+  padding: 15px 15px 15px 15px; }
 
 @media (min-width: 801px) and (max-width: 1024px) {
   .section {
