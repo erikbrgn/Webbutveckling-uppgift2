@@ -7,7 +7,6 @@
   max-width: 1360px;
 }
 
-
 .wrapper > * {
   grid-column: col-start / span 12;
 }
@@ -15,6 +14,7 @@
 .section {
   display: none;
   box-shadow: $shadow;
+  margin: 0px 15px;
 }
 .main {
   padding: 15px;
@@ -23,7 +23,7 @@
   background-color: #F7F9F9;
   box-shadow: $shadow;
   margin: 0px 15px;
-  padding: 15px 15px 15px 15px;
+  padding: 15px;
 }
 
 @include media(">medium", "<=large") {
