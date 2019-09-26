@@ -61,35 +61,62 @@
         </div>
         <div class="main">
             <h2>Sök till Kanalkarnevalen</h2>
-            
-            <form>
-            <p>Välj sektion:</p>
-                <select name="sektioner" size=>
-                    <option value="administer-it">Administer IT</option>
-                    <option value="biljonsen">Biljonsen</option>
-                    <option value="bladderiet">Blädderiet</option>
-                    <option value="dansen">Dansen</option>
-                    <option value="nojen">Nöjen</option>
-                    <option value="taget">Tåget</option>
-                </select>
-            <p>Förnamn:</p>
-            <input type="text" name="firstname">
-            <p>Efternamn:</p>
-            <input type="text" name="lastname">
-            <p>E-mail:</p>
-            <input type="text" name="email">
-            <p>Telefonnummer:</p>
-            <input type="text" name="telephoneNumber">
-            <p></p>
-            <input type="submit">
+
+
+            <form id="form" method="POST" action="#">
+                <div class="form-field select">
+                    <label class="field-label" for="sektioner">Önskad sektion</label>
+                    <select name="sektioner" size=>
+                        <option value selected></option>
+                        <option value="administer-it">Administer IT</option>
+                        <option value="biljonsen">Biljonsen</option>
+                        <option value="bladderiet">Blädderiet</option>
+                        <option value="dansen">Dansen</option>
+                        <option value="nojen">Nöjen</option>
+                        <option value="taget">Tåget</option>
+                    </select>
+                </div>
+                <div class="form-field input">
+                    <label class="field-label" for="firstname">Förnamn</label>
+                    <input type="text" value name="firstname">
+                </div>
+                <div class="form-field input">
+                    <label class="field-label" for="lastname">Efternamn</label>
+                    <input type="text" value name="lastname">
+                </div>
+                <div class="form-field input">
+                    <label class="field-label" for="email">E-mail</label>
+                    <input type="text" value name="email">
+                </div>
+                <div class="form-field input">
+                    <label class="field-label" for="telephoneNumber">Telefonnummer</label>
+                    <input type="text" value name="telephoneNumber">
+                </div>
+                <input type="submit" value="Sök" disabled>
             </form>
-            
+
         </div>
         <div class="side">
-            <h1>Kommande events</h1>
+            <h2>Events</h2>
+            <h3>Fredag 18 mars</h3>
+            <p>09:00 - 16:00<br>
+                <b>Tidningsdagen</b>
+            </p>
+            <hr>
+            <p>
+                20:00 - 03:00<br>
+                <b>Tidningsfesten</b>
+            </p>
+            <hr>
+            <h3>Onsdag 18 maj</h3>
+            <p>08:00 - 09:00<br>
+                <b>Generalen hälsar folket välkomna</b></p>
+            <hr>
             <div class="events">
                 <img alt="Reklambild" src="assets/img/Karneval2010084.jpg">
-                <h3>Kom och se Spexet!</h3>
+                <p>09:15 - 10:00<br>
+                    <b>Kom och se Spexet!</b>
+                    <p>
             </div>
         </div>
         <div class="footer">
