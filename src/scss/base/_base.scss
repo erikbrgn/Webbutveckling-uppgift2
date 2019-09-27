@@ -70,6 +70,11 @@ hr {
     margin-right: 16px;
     background-color: $orange;
   }
+
+  img {
+    max-height: 400px;
+    width: auto;
+  }
 }
 
 select {

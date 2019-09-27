@@ -8,11 +8,12 @@
   position: sticky;
   top: 0;
   height: 75px;
+  background-color: #ffffff;
   align-items: center;
   padding: 0 20px;
-  background-color: #fafafa;
   margin-bottom: -20px;
   z-index: 20;
+  box-shadow: 0 4px 6px -6px black;
 
   .empty {
     display: none;
@@ -147,6 +148,10 @@
 }
 
 @include media(">large") {
+
+  .nav {
+    border-radius: 4px;
+  }
 
   .menu>li {
     align-items: center;

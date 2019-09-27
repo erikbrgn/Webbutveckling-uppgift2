@@ -22,10 +22,10 @@
 
 // 5. Components
 @import 'components/button',
-'components/form';
+'components/form', 'components/slideshow', 'components/video';
 
 // 6. Page-specific styles
-@import 'pages/home';
+@import 'pages/home', 'pages/404';
 
 // 7. Themes
 @import 'themes/default';
