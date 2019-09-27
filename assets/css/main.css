@@ -459,8 +459,7 @@ hr {
   background-color: #fec771; }
 
 .main img {
-  max-height: 400px;
-  width: auto; }
+  max-height: 400px; }
 
 select {
   -webkit-appearance: none;
