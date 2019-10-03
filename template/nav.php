@@ -2,34 +2,34 @@
 echo '<div class="nav">
 <button id="hamburger" class="hamburger" onclick="toggleMenu();"></button>
 <div class="brand-container">
-    <h1 class="brand-title"><a href="index.html" style="color:#fec771">Karnevalen</a></h1>
+    <h1 class="brand-title"><a href="index.php" style="color:#fec771">Karnevalen</a></h1>
 </div>
 <div class="empty"></div>
 <div id="link-container" class="link-container">
     <ul class="menu">
-        <li><a href="bli-karnevalist.html">Bli Karnevalist</a>
+        <li><a href="bli-karnevalist.php">Bli Karnevalist</a>
             <ul class="dropdown-container">
-                <li><a href="ansok.html">Ansök</a></li>
-                <li><a href="sektioner.html">Sektioner</a>
+                <li><a href="ansok.php">Ansök</a></li>
+                <li><a href="sektioner.php">Sektioner</a>
                     <ul>
-                        <li><a href="administer-it.html">AdministerIT</a></li>
-                        <li><a href="biljonsen.html">Biljonsen</a></li>
-                        <li><a href="bladderiet.html">Blädderiet</a></li>
-                        <li><a href="dansen.html">Dansen</a></li>
+                        <li><a href="administer-it.php">AdministerIT</a></li>
+                        <li><a href="biljonsen.php">Biljonsen</a></li>
+                        <li><a href="bladderiet.php">Blädderiet</a></li>
+                        <li><a href="dansen.php">Dansen</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <li><a href="om-karnevalen.html">Om Karnevalen</a>
+        <li><a href="om-karnevalen.php">Om Karnevalen</a>
             <ul class="dropdown-container">
-                <li><a href="nojen.html">Nöjen</a></li>
-                <li><a href="artister.html">Artister</a></li>
-                <li><a href="taget.html">Tåget</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="hitta-oss.html">Hitta hit</a></li>
+                <li><a href="nojen.php">Nöjen</a></li>
+                <li><a href="artister.php">Artister</a></li>
+                <li><a href="taget.php">Tåget</a></li>
+                <li><a href="faq.php">FAQ</a></li>
+                <li><a href="hitta-oss.php">Hitta hit</a></li>
             </ul>
         </li>
-        <li><a href="reservera-biljetter.html">Reservera biljetter</a></li>
+        <li><a href="reservera-biljetter.php">Reservera biljetter</a></li>
     </ul>
 </div>
 
