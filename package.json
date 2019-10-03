@@ -2,10 +2,11 @@
   "name": "webbutveckling-uppgift2",
   "version": "0.0.1",
   "description": "Uppgift 2 i Webbutveckling",
-  "main": "index.html",
+  "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -o -p 8080 -c-1"
+    "old-start": "http-server -o -p 8080 -c-1",
+    "start": "php -S localhost:8080"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
     "gulp-watch": "^5.0.1",
-    "include-media": "^1.4.9"
+    "include-media": "^1.4.9",
+    "light-web-server": "^1.2.6"
   }
 }
