@@ -93,7 +93,8 @@
       top: 75px;
       height: auto;
       background-color: #fafafa;
-      box-shadow: $shadow;
+      box-shadow: 0 4px 6px -6px black;
+      transition: none;
 
       .menu {
         display: block;

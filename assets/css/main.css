@@ -439,7 +439,9 @@ img {
 
 hr {
   margin: 20px 0px;
-  border-color: #fec771; }
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(90deg, #eb7070 0%, #fec771 100%); }
 
 .main ul {
   padding-left: 0px;
@@ -467,6 +469,8 @@ select {
   appearance: none; }
 
 input[type="text"],
+input[type="email"],
+input[type="tel"],
 select {
   border: none;
   font-family: "Open Sans", sans-serif;
@@ -480,11 +484,21 @@ select {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   padding: 13px 20px 0px 20px !important; }
 
-input:focus,
-select:focus,
-textarea:focus {
+.active input:focus,
+.active select:focus,
+.active textarea:focus {
   outline: none;
   border: 2px solid #fec771; }
+
+.active input:invalid,
+.active select:invalid {
+  outline: none;
+  border: 2px solid #eb7070; }
+
+.active input:valid,
+.active select:valid {
+  outline: none;
+  border: 2px solid #64e291; }
 
 input[type="submit"] {
   margin-left: auto;
@@ -696,7 +710,8 @@ p {
   display: flex;
   background-image: linear-gradient(90deg, #eb7070, #fec771);
   padding: 10px 20px;
-  font-size: 70%; }
+  font-size: 70%;
+  justify-content: space-between; }
   .footer p, .footer a {
     color: #fff;
     text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
@@ -706,10 +721,13 @@ p {
   display: flex;
   flex-direction: column; }
 
+.countdown-footer {
+  display: flex;
+  align-items: center; }
+
 .copyright-footer {
   display: flex;
-  align-items: center;
-  margin-left: auto; }
+  align-items: center; }
 
 @media (min-width: 1025px) {
   .footer {
@@ -717,11 +735,14 @@ p {
 
 @media (max-width: 800px) {
   .footer {
-    display: block; }
+    flex-direction: column; }
   .contact-footer {
     text-align: center;
     justify-content: center;
     margin: 0 auto; }
+  .countdown-footer {
+    text-align: center;
+    justify-content: center; }
   .copyright-footer {
     text-align: center;
     margin: 0 auto;
@@ -846,7 +867,8 @@ p {
     top: 75px;
     height: auto;
     background-color: #fafafa;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 6px -6px black;
+    transition: none; }
     .nav .link-container .menu {
       display: block;
       padding: 10px 20px; }

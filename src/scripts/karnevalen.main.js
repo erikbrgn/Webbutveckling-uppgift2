@@ -1,4 +1,4 @@
-function toggleMenu() {
+/*function toggleMenu() {
     var linkContainer = document.getElementById('link-container');
     var hamburger = document.getElementById('hamburger');
 
@@ -9,7 +9,11 @@ function toggleMenu() {
         linkContainer.classList.add('show');
         hamburger.classList.add('open');
     }
-}
+} */
+
+$('#hamburger').click(function() {
+    $('#link-container').toggle('fold', 500);
+});
 
 
 var countDownDate = new Date("May 18, 2022 00:00:01").getTime();
@@ -35,6 +39,11 @@ var x = setInterval(function () {
     var timer = document.getElementById("countdown");
     if (timer !== null) {
         timer.innerHTML = days + " dagar<br>tills det smäller!";
+    }
+
+    var timerFooter = document.getElementById('timer-footer');
+    if (timerFooter !== null) {
+        timerFooter.innerHTML = days + " dagar kvar!";
     }
 
     // If the count down is finished, write some text

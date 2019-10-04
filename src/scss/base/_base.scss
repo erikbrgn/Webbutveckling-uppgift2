@@ -45,7 +45,9 @@ img {
 
 hr {
   margin: 20px 0px;
-  border-color: $orange;
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(90deg, $red 0%, $orange 100%);
 }
 
 .main {
@@ -83,6 +85,8 @@ select {
 }
 
 input[type="text"],
+input[type="email"],
+input[type="tel"],
 select {
   border: none;
   font-family: "Open Sans", sans-serif;
@@ -97,11 +101,23 @@ select {
   padding: 13px 20px 0px 20px !important;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+.active input:focus,
+.active select:focus,
+.active textarea:focus {
   outline: none;
   border: 2px solid $orange;
+}
+
+.active input:invalid,
+.active select:invalid {
+  outline: none;
+  border: 2px solid $red;
+}
+
+.active input:valid,
+.active select:valid {
+  outline: none;
+  border: 2px solid $green;
 }
 
 input[type="submit"] {

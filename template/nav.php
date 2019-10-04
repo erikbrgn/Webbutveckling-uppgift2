@@ -1,6 +1,6 @@
 <?php
 echo '<div class="nav">
-<button id="hamburger" class="hamburger" onclick="toggleMenu();"></button>
+<button id="hamburger" class="hamburger"></button>
 <div class="brand-container">
     <h1 class="brand-title"><a href="index.php" style="color:#fec771">Karnevalen</a></h1>
 </div>
