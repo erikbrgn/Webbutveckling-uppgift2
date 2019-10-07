@@ -1,5 +1,5 @@
 <div class="side">
-    <h2>Events</h2>
+    <h2>Evenemang</h2>
     <h3>Fredag 18 mars</h3>
     <p>09:00 - 16:00<br>
         <b>Tidningsdagen</b>

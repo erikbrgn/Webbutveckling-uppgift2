@@ -39,7 +39,7 @@
         <?php include 'template/side.php';?>
         <?php include 'template/footer.php';?>
     </div>
-
+    <?php include 'template/lightbox.php';?>
     <?php include 'template/resources.php';?>
 </body>
 

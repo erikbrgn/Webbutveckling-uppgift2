@@ -25,7 +25,10 @@
 
 // 5. Components
 @import 'components/button',
-'components/form', 'components/slideshow', 'components/video';
+'components/form', 
+'components/slideshow', 
+'components/video',
+'components/lightbox';
 
 // 6. Page-specific styles
 @import 'pages/home', 'pages/404';

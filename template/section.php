@@ -1,5 +1,5 @@
 <div class="section">
-    <h2>Favoritbilderna</h2>
+    <h2>Favoriterna</h2>
     <div class="slideshow">
         <div class="mySlide fade">
             <img alt="Karnevalståget" src="assets/img/Karneval02.jpg">

@@ -1,4 +1,4 @@
-document.getElementById('hamburger').addEventListener('click', function() {
+document.getElementById('hamburger').addEventListener('click', function () {
     if (this.classList.contains('is-active')) {
         this.classList.remove('is-active');
     } else {
@@ -30,7 +30,7 @@ var x = setInterval(function () {
     // Display the result in the element with id="demo"
     var timer = document.getElementById("countdown");
     if (timer !== null) {
-        timer.innerHTML = days + " dagar<br>tills det smäller!";
+        timer.innerHTML = days + " dagar tills det smäller!";
     }
 
     var timerFooter = document.getElementById('timer-footer');
@@ -139,3 +139,22 @@ var FloatLabel = (function () {
 })();
 
 FloatLabel.init();
+
+// Lightbox
+// Open the Modal
+document.querySelectorAll('img').forEach(function (element) {
+    element.addEventListener('click', function () {
+        var modal = document.getElementById('modalContent');
+        modal.innerHTML = "";
+        modal.appendChild(this.cloneNode(true));
+        document.getElementById("myModal").style.display = "flex";
+    });
+});
+
+document.getElementById('myModal').addEventListener('click', function () {
+    this.style.display = "none";
+})
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}

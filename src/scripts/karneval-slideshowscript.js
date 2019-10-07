@@ -5,7 +5,7 @@ var slideIndexMain = 1;
 showSlidesMain(slideIndexMain);
 
 var slideIndexModal = 1;
-showSlidesModul(slideIndexModal);
+// showSlidesModul(slideIndexModal);
 
 // Next/previous controls
 function plusSlides(n) {
@@ -36,41 +36,40 @@ function currentSlideModal(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlide");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
+  if (n > slides.length) {
+    slideIndex = 1
   }
-  slides[slideIndex-1].style.display = "block"; 
+  if (n < 1) {
+    slideIndex = slides.length
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
 }
 
 function showSlidesMain(n) {
   var i;
   var slides = document.getElementsByClassName("mySlideMain");
-  if (n > slides.length) {slideIndexMain = 1} 
-  if (n < 1) {slideIndexMain = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
+  if (n > slides.length) {
+    slideIndexMain = 1
   }
-  slides[slideIndexMain-1].style.display = "block"; 
-}
-
-function showSlidesModal(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlideModal");
-  if (n > slides.length) {slideIndexModal = 1} 
-  if (n < 1) {slideIndexModal = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
+  if (n < 1) {
+    slideIndexMain = slides.length
   }
-  slides[slideIndexModal-1].style.display = "block"; 
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndexMain - 1].style.display = "block";
 }
 
-// Open the Modal
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
+// function showSlidesModal(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlideModal");
+//   if (n > slides.length) {slideIndexModal = 1} 
+//   if (n < 1) {slideIndexModal = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none"; 
+//   }
+//   slides[slideIndexModal-1].style.display = "block"; 
+// }

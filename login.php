@@ -24,7 +24,6 @@
 
             </form>
         </div>
-
         <?php include 'template/footer.php';?>
     </div>
     <?php include 'template/resources.php';?>
