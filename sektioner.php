@@ -24,7 +24,11 @@
         <?php include 'template/side.php';?>
         <?php include 'template/footer.php';?>
     </div>
+<<<<<<< HEAD
 
+=======
+    <?php include 'template/lightbox.php';?>
+>>>>>>> 3326e5372ed6577c4a907104d8769d5046b19cdc
     <?php include 'template/resources.php';?>
 </body>
 

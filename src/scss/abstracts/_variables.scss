@@ -8,11 +8,20 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Open Sans',
+'Helvetica Neue Light',
+'Helvetica Neue',
+'Helvetica',
+'Arial',
+sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$code-font-stack: 'Courier New',
+'DejaVu Sans Mono',
+'Bitstream Vera Sans Mono',
+'Monaco',
+monospace !default;
 
 
 
@@ -48,7 +57,8 @@ $yellow: #e6e56c;
 
 // box-shadows
 $shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
-$shadow-pro-max: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$shadow-pro-max: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 // animation transition
 
@@ -60,6 +70,19 @@ $sexy: all 255ms cubic-bezier(0.29, 0.19, 0.405, 1);
 $max-width: 1180px !default;
 
 
+// hamburger nav
+$hamburger-padding-x : 10px !default;
+$hamburger-padding-y : 10px !default;
+$hamburger-layer-width : 35px !default;
+$hamburger-layer-height : 4px !default;
+$hamburger-layer-spacing : 5px !default;
+$hamburger-layer-color : #000 !default;
+$hamburger-layer-border-radius : 4px !default;
+$hamburger-hover-opacity : 0.7 !default;
+$hamburger-active-layer-color : $hamburger-layer-color !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+
+
 // animation
 
 
@@ -68,11 +91,10 @@ $max-width: 1180px !default;
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 800px,
+$breakpoints: ('small': 320px,
+  'medium': 768px,
   'large': 1024px,
-);
+  'x-large': 1360px);
 
 
 

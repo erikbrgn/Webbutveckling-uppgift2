@@ -7,6 +7,7 @@
   background-image: linear-gradient(90deg, #eb7070, #fec771);
   padding: 10px 20px;
   font-size: 70%;
+  justify-content: space-between;
 
   p, a {
     color: #fff;
@@ -19,29 +20,33 @@
   display:flex;
   flex-direction: column;
 }
+.countdown-footer {
+  display: flex;
+  align-items: center;
+}
 
 .copyright-footer {
   display:flex;
   align-items: center;
-  margin-left:auto;
 }
 
 @include media (">large") {
-  .footer {
-    border-radius: 4px;
-  }
 }
 
 @include media("<=medium") {
 
   .footer {
-    display: block;
+    flex-direction: column;
   }
 
   .contact-footer {
     text-align: center;
     justify-content: center;
     margin: 0 auto;
+  }
+  .countdown-footer {
+    text-align: center;
+    justify-content: center;
   }
 
   .copyright-footer {

@@ -8,6 +8,7 @@
 // 2. Vendors
 @import 'vendors/normalize';
 @import 'vendors/include-media';
+@import 'vendors/hamburgers/hamburgers.scss';
 
 // 3. Base stuff
 @import 'base/base',
@@ -17,12 +18,17 @@
 
 // 4. Layout-related sections
 @import 'layout/header',
-'layout/footer', 'layout/grid',
-'layout/navigation';
+'layout/footer', 
+'layout/grid',
+'layout/navigation',
+'layout/login';
 
 // 5. Components
 @import 'components/button',
-'components/form', 'components/slideshow', 'components/video';
+'components/form', 
+'components/slideshow', 
+'components/video',
+'components/lightbox';
 
 // 6. Page-specific styles
 @import 'pages/home', 'pages/404';

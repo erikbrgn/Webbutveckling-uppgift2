@@ -1,15 +1,11 @@
-function toggleMenu() {
-    var linkContainer = document.getElementById('link-container');
-    var hamburger = document.getElementById('hamburger');
-
-    if (linkContainer.classList.contains('show')) {
-        linkContainer.classList.remove('show');
-        hamburger.classList.remove('open');
+document.getElementById('hamburger').addEventListener('click', function () {
+    if (this.classList.contains('is-active')) {
+        this.classList.remove('is-active');
     } else {
-        linkContainer.classList.add('show');
-        hamburger.classList.add('open');
+        this.classList.add('is-active');
     }
-}
+    $('#link-container').toggle('fold', 500);
+});
 
 
 var countDownDate = new Date("May 18, 2022 00:00:01").getTime();
@@ -34,7 +30,12 @@ var x = setInterval(function () {
     // Display the result in the element with id="demo"
     var timer = document.getElementById("countdown");
     if (timer !== null) {
-        timer.innerHTML = days + " dagar<br>tills det smäller!";
+        timer.innerHTML = days + " dagar tills det smäller!";
+    }
+
+    var timerFooter = document.getElementById('timer-footer');
+    if (timerFooter !== null) {
+        timerFooter.innerHTML = days + " dagar kvar!";
     }
 
     // If the count down is finished, write some text
@@ -89,7 +90,7 @@ var FloatLabel = (function () {
     }; // get DOM elements
 
     var init = function init() {
-        var floatContainers = document.querySelectorAll('#form>div.form-field.input');
+        var floatContainers = document.querySelectorAll('div.form-field.input');
 
         //IE & Edge compatibility fix for forEach
         if (window.NodeList && !NodeList.prototype.forEach) {
@@ -106,7 +107,7 @@ var FloatLabel = (function () {
             bindEvents(element);
         });
         var floatSelectContainer = document.querySelectorAll(
-            '#form>div.form-field.select'
+            'div.form-field.select'
         );
         floatSelectContainer.forEach(function (element) {
             var select = element.querySelector('select');
@@ -138,3 +139,22 @@ var FloatLabel = (function () {
 })();
 
 FloatLabel.init();
+
+// Lightbox
+// Open the Modal
+document.querySelectorAll('img').forEach(function (element) {
+    element.addEventListener('click', function () {
+        var modal = document.getElementById('modalContent');
+        modal.innerHTML = "";
+        modal.appendChild(this.cloneNode(true));
+        document.getElementById("myModal").style.display = "flex";
+    });
+});
+
+document.getElementById('myModal').addEventListener('click', function () {
+    this.style.display = "none";
+})
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/erikbrgn/Webbutveckling-uppgift2#readme",
   "dependencies": {
+    "hamburgers": "^1.1.3",
     "http-server": "^0.11.1",
     "sass": "^1.22.12"
   },

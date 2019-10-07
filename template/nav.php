@@ -1,6 +1,9 @@
-<?php
-echo '<div class="nav">
-<button id="hamburger" class="hamburger" onclick="toggleMenu();"></button>
+<div class="nav">
+<button id="hamburger" class="hamburger hamburger--squeeze" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
 <div class="brand-container">
     <h1 class="brand-title"><a href="index.php" style="color:#fec771">Karnevalen</a></h1>
 </div>
@@ -33,5 +36,4 @@ echo '<div class="nav">
     </ul>
 </div>
 
-</div>';
-?>
+</div>

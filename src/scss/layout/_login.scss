@@ -1,0 +1,21 @@
+.login-container {
+    display: flex;
+    margin: auto 0;
+    grid-column: 2 / 12;
+    background-color: #fafafa;
+    box-shadow: $shadow;
+    border-radius: 4px;
+}
+
+@include media(">large") {
+    .login-container {
+        grid-column: 5 / 9;
+    }
+}
+
+@include media(">medium", "<=large") {
+    .login-container {
+        grid-column: 4 / 10;
+    }
+}
+
