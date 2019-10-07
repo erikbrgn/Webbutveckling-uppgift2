@@ -21,14 +21,6 @@
 
   .hamburger {
     display: none;
-    appearance: none;
-    border: none;
-    background: url(../img/menu-dark.svg) no-repeat;
-    background-size: 36px;
-    height: 36px;
-    width: 36px;
-    padding: 0px;
-    outline: none;
 
     &:focus,
     &:active {
@@ -76,13 +68,7 @@
 
     .hamburger {
       display: block;
-      transform: rotateY(180deg);
-
-      &.open {
-        background: url(../img/menu-open-dark.svg) no-repeat;
-        background-size: 36px;
-        transform: rotateY(180deg);
-      }
+      padding-bottom: 4px;
     }
 
     .link-container {
@@ -147,12 +133,14 @@
     }
   }
 }
+@include media (">x-large"){
+  .nav {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+}
 
 @include media(">large") {
-
-  .nav {
-    border-radius: 4px;
-  }
 
   .menu>li {
     align-items: center;

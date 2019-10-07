@@ -1,17 +1,9 @@
-/*function toggleMenu() {
-    var linkContainer = document.getElementById('link-container');
-    var hamburger = document.getElementById('hamburger');
-
-    if (linkContainer.classList.contains('show')) {
-        linkContainer.classList.remove('show');
-        hamburger.classList.remove('open');
+document.getElementById('hamburger').addEventListener('click', function() {
+    if (this.classList.contains('is-active')) {
+        this.classList.remove('is-active');
     } else {
-        linkContainer.classList.add('show');
-        hamburger.classList.add('open');
+        this.classList.add('is-active');
     }
-} */
-
-$('#hamburger').click(function() {
     $('#link-container').toggle('fold', 500);
 });
 
@@ -98,7 +90,7 @@ var FloatLabel = (function () {
     }; // get DOM elements
 
     var init = function init() {
-        var floatContainers = document.querySelectorAll('#form>div.form-field.input');
+        var floatContainers = document.querySelectorAll('div.form-field.input');
 
         //IE & Edge compatibility fix for forEach
         if (window.NodeList && !NodeList.prototype.forEach) {
@@ -115,7 +107,7 @@ var FloatLabel = (function () {
             bindEvents(element);
         });
         var floatSelectContainer = document.querySelectorAll(
-            '#form>div.form-field.select'
+            'div.form-field.select'
         );
         floatSelectContainer.forEach(function (element) {
             var select = element.querySelector('select');

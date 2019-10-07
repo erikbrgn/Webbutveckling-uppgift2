@@ -9,6 +9,10 @@ html {
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -36,6 +40,10 @@ a {
     color: $text-color;
     text-decoration: none;
   }
+}
+
+legend {
+  margin-bottom: 15px;
 }
 
 img {
@@ -87,6 +95,7 @@ select {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="password"],
 select {
   border: none;
   font-family: "Open Sans", sans-serif;
