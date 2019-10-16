@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "old-start": "http-server -o -p 8080 -c-1",
-    "start": "php -S localhost:8080"
+    "start": "php -S localhost:8080 -t public_html/"
   },
   "repository": {
     "type": "git",

@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <?php include 'template/head-tag-content.php';?>
-</head>
-
-<body>
     <div class="wrapper">
         <?php include 'template/nav.php';?>
         <?php include 'template/header.php';?>
@@ -52,6 +44,3 @@
     </div>
     <?php include 'template/lightbox.php';?>
     <?php include 'template/resources.php';?>
-</body>
-
-</html>

@@ -4,3 +4,6 @@
     integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <script src="src/scripts/karnevalen.main.js" type="text/javascript"></script>
 <script src="src/scripts/karneval-slideshowscript.js" type="text/javascript"></script>
+</body>
+
+</html>

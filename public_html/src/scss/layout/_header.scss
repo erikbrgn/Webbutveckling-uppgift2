@@ -53,6 +53,11 @@
   margin-bottom: 0px;
 }
 
+.adminheader {
+  display: flex;
+  height: 100px;
+}
+
 @include media (">large") {
 }
 

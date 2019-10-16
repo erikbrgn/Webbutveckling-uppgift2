@@ -43,7 +43,8 @@ function login() {
 
       // Login successful: Create a session and redirect to the admin homepage
       $_SESSION['username'] = ADMIN_USERNAME;
-      header( "Location: backend/admin.php" );
+      header( "Location: http://localhost:8080/adminPanel.php" );
+
 
     } else {
 
