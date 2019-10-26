@@ -28,10 +28,12 @@
 'components/form', 
 'components/slideshow', 
 'components/video',
-'components/lightbox';
+'components/lightbox',
+'components/table';
 
 // 6. Page-specific styles
-@import 'pages/home', 'pages/404';
+@import 'pages/home', 'pages/404',
+'pages/staff.scss';
 
 // 7. Themes
 @import 'themes/default';

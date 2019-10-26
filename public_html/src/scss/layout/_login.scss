@@ -1,10 +1,18 @@
 .login-container {
-    display: flex;
     margin: auto 0;
     grid-column: 2 / 12;
-    background-color: #fafafa;
-    box-shadow: $shadow;
     border-radius: 4px;
+}
+
+.submit-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: unset;
+
+    input {
+        margin-bottom: 10px;
+    }
 }
 
 @include media(">large") {
@@ -19,3 +27,15 @@
     }
 }
 
+@include media(">medium") {
+    .submit-container {
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: unset;
+        flex-direction: unset;
+
+        input {
+            margin-bottom: unset;
+        }
+    }
+}

@@ -1,12 +1,14 @@
-document.getElementById('hamburger').addEventListener('click', function () {
-    if (this.classList.contains('is-active')) {
-        this.classList.remove('is-active');
-    } else {
-        this.classList.add('is-active');
-    }
-    $('#link-container').toggle('fold', 500);
-});
-
+var hamburger = document.getElementById('hamburger');
+if (hamburger) {
+    hamburger.addEventListener('click', function () {
+        if (this.classList.contains('is-active')) {
+            this.classList.remove('is-active');
+        } else {
+            this.classList.add('is-active');
+        }
+        $('#link-container').toggle('fold', 500);
+    });
+}
 
 var countDownDate = new Date("May 18, 2022 00:00:01").getTime();
 
@@ -150,10 +152,12 @@ document.querySelectorAll('img').forEach(function (element) {
         document.getElementById("myModal").style.display = "flex";
     });
 });
-
-document.getElementById('myModal').addEventListener('click', function () {
-    this.style.display = "none";
-})
+var modal = document.getElementById('myModal');
+if (modal) {
+    modal.addEventListener('click', function () {
+        this.style.display = "none";
+    });
+}
 
 function closeModal() {
     document.getElementById("myModal").style.display = "none";

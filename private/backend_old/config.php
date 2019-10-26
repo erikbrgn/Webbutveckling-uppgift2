@@ -21,13 +21,13 @@ define( "ADMIN_USERNAME", "admin" );
 define( "ADMIN_PASSWORD", "password" );
 require( CLASS_PATH . "/article.php" );
 
-// SHITY ERROR HANDLING
-// function handleException( $exception ) {
-//   echo "Sorry, a problem occurred. Please try again later.";
-//   error_log( $exception->getMessage() );
-// }
+//SHITY ERROR HANDLING
+function handleException( $exception ) {
+  echo "Sorry, a problem occurred. Please try again later.";
+  error_log( $exception->getMessage() );
+}
 
-// set_exception_handler( 'handleException' );
+set_exception_handler( 'handleException' );
 
 
 $conn = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);

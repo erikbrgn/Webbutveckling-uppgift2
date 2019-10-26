@@ -33,6 +33,7 @@
             </ul>
         </li>
         <li><a href="reservera-biljetter.php">Reservera biljetter</a></li>
+        <li><a href="staff/login.php">Login</a></li>
     </ul>
 </div>
 

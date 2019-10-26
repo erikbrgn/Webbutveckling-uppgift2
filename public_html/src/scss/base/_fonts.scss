@@ -2,7 +2,23 @@
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Gayathri|Open+Sans|Vibes&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Gayathri|Open+Sans|Vibes&display=swap');
+
+@font-face {
+    font-family: Open Sans;
+    src: url('../fonts/opensans/opensans-regular.ttf');
+    font-display: swap;
+}
+@font-face {
+    font-family: Vibes;
+    src: url('../fonts/vibes/vibes-regular.ttf');
+    font-display: swap;
+}
+@font-face {
+    font-family: Gayathri;
+    src: url('../fonts/gayathri/gayathri-regular.ttf');
+    font-display: swap;
+}
 
 /*
 Fonts:
@@ -16,3 +32,4 @@ font-family: 'Vibes', cursive;
 // Headings
 font-family: 'Gayathri', sans-serif;
  */
+

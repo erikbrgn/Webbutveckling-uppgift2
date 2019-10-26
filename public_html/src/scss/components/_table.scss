@@ -1,0 +1,49 @@
+table.table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 0.25em;
+}
+
+.table tr {
+    border-bottom: 1px solid #DDD;
+}
+
+.table {
+    border-top: 10px solid $red;
+    border-bottom: 10px solid $red;
+}
+
+.table thead tr {
+    border-bottom: 1px solid $orange;
+}
+
+td.edit-buttons {
+    text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+    tr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0.5em 0;
+        border: 1px solid rgba(3, 3, 3, 0.2);
+    }
+
+    td,
+    th {
+        flex: 1 1 150px;
+        border: 0.5px solid rgba(3, 3, 3, 0.2);
+    }
+
+    td.edit-buttons,
+    td.empty {
+        /*flex: 1 0 90%;
+    text-align: center;*/
+    }
+}
