@@ -8,6 +8,8 @@
     <?php include( SHARED_PATH . '/staff_nav.php');?>
     <div class="staff-content">
         <div class="message-container">
+        </div>
+        <div class="block-1">
             <h1 class="brand-title mb-3">Karnevalpersonal</h1>
             <h2>Välkommen till dashboarden, <?php echo $_SESSION['username'];?></h2>
         </div>

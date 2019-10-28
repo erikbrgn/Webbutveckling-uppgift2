@@ -100,12 +100,13 @@ var FloatLabel = (function () {
         }
 
         floatContainers.forEach(function (element) {
-            var input = element.querySelector('input').value;
+            var input = element.querySelector('input');
 
-            if (input || input === null) {
-                element.classList.add('active');
+            if (input) {
+                if (input.value || input === null) {
+                    element.classList.add('active');
+                }
             }
-
             bindEvents(element);
         });
         var floatSelectContainer = document.querySelectorAll(

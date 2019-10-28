@@ -34,6 +34,10 @@ p {
   letter-spacing: 0.2px;
 }
 
+p b, p strong {
+  font-family: 'Open Sans Bold';
+}
+
 @include media('<=medium') {
 
 

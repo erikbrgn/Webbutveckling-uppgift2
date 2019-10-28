@@ -19,6 +19,7 @@
     
       // if there were no errors, try to login
       if(empty($errors)) {
+
         // Using one variable ensures that msg is the same
         $login_failure_msg = "Inloggningen misslyckades.";
     
@@ -60,6 +61,7 @@
           <input type="password" name="password" id="password" value name="password" required maxlength="20">
         </div>
         <input type="hidden" name="login" value="true">
+        <p><?php echo $errors[0]; ?></p>
         <div class="submit-container">
           <a href="<?php echo url_for('index.php');?>">tillbaka</a>
           <input type="submit" value="login">

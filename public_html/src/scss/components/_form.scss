@@ -5,7 +5,7 @@
 }
 
 #form,
-#login {
+#login, .float-form, #content_edit_form {
     display: flex;
     flex-direction: column;
 
@@ -35,6 +35,10 @@
     padding: 0 20px;
     z-index: 0 !important;
     pointer-events: none;
+
+    &.textarea {
+        transform-origin: unset;
+    }
 }
 
 #login {

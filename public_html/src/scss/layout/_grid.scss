@@ -25,6 +25,10 @@
   }
 }
 
+.message {
+  
+}
+
 .section {
   display: none;
   box-shadow: $shadow;
@@ -33,7 +37,7 @@
 }
 
 .main {
-  padding: 15px;
+  padding: 15px 30px;
 }
 
 .side {
@@ -63,22 +67,27 @@
 
 @include media(">large") {
 
+  .message {
+    grid-row: 3;
+  }
+
   .section {
     display: block;
     grid-column: col-start / span 3;
-    grid-row: 3 / 5;
+    grid-row: 4 / 6;
     padding: 15px;
     background-color: #F7F9F9;
   }
 
   .main {
     grid-column: col-start 4 / span 6;
-    grid-row: 3 / 5;
+    grid-row: 4 / 6;
+    padding: 15px;
   }
 
   .side {
     grid-column: col-start 10 / span 3;
-    grid-row: 3 / 5;
+    grid-row: 4 / 6;
   }
 }
 

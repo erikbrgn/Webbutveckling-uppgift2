@@ -8,7 +8,7 @@
   define("PUBLIC_PATH", PROJECT_PATH . '/public_html');
   define("SHARED_PATH", PRIVATE_PATH . '/shared');
 
-  define("ALLOWED_TAGS", '<div><img><h1><h2><h3><h4><h5><p><em><address><b><strong><span><ul><li>');
+  define("ALLOWED_TAGS", '<div><img><small><h1><h2><h3><h4><h5><p><em><br><hr><address><b><strong><span><ul><li>');
 
   // Assign the root URL to a PHP constant
   // * Do not need to include the domain
@@ -29,7 +29,7 @@
   require_once('validation_functions.php');
   require_once('auth_functions.php');
 
-  //initiate_db();
+  // initiate_db();
 
   //$db = db_connect();
   $errors = [];

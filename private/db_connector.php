@@ -35,14 +35,33 @@
         return $result;
     }
 
+    function db_execute ($query) {
+        $conn = db_connect();
+
+        $sth = $conn->prepare($query);
+        $sth->execute();
+
+        return $sth;
+    }
+
+    function db_count ($query) {
+        $conn = db_connect();
+
+        $sth = $conn->prepare($query);
+        $sth->execute();
+
+        $count = $sth->fetchColumn();
+        return $count;
+    }
+
     function db_disconnect($conn) {
         $conn = null;
     }
     
     function confirm_results($result_set) {
         if (!$result_set) {
-            exit("Database query failed.");
-        }
+            return false;
+        } return true;
     }
 
 ?>

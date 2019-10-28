@@ -93,23 +93,9 @@
     return preg_match($email_regex, $value) === 1;
   }
 
-  // has_unique_page_menu_name('History')
-  // * Validates uniqueness of pages.menu_name
-  // * For new records, provide only the menu_name.
-  // * For existing records, provide current ID as second arugment
-  //   has_unique_page_menu_name('History', 4)
-  function has_unique_page_menu_name($menu_name, $current_id="0") {
-    global $db;
-
-    $sql = "SELECT * FROM pages ";
-    $sql .= "WHERE menu_name='" . db_escape($db, $menu_name) . "' ";
-    $sql .= "AND id != '" . db_escape($db, $current_id) . "'";
-
-    $page_set = mysqli_query($db, $sql);
-    $page_count = mysqli_num_rows($page_set);
-    mysqli_free_result($page_set);
-
-    return $page_count === 0;
+  function has_valid_student_id($value) {
+    $id_regex = '/^([0-9][0-9])((0[1-9])|(1[0-2]))(0[1-9]|[12][0-9]|3[01])-?([0-9][0-9][0-9][0-9])/';
+    return preg_match($id_regex, $value) === 1;
   }
 
   // has_unique_username('johnqpublic')
@@ -118,17 +104,53 @@
   // * For existing records, provide current ID as second argument
   //   has_unique_username('johnqpublic', 4)
   function has_unique_username($username, $current_id="0") {
-    global $db;
+    $sql = "SELECT count(*) FROM user ";
+    $sql .= "WHERE username='" . $username . "' ";
+    $sql .= "AND id != '" . $current_id . "'";
 
-    $sql = "SELECT * FROM admins ";
-    $sql .= "WHERE username='" . db_escape($db, $username) . "' ";
-    $sql .= "AND id != '" . db_escape($db, $current_id) . "'";
+    $admin_count = db_count($sql);
 
-    $result = mysqli_query($db, $sql);
-    $admin_count = mysqli_num_rows($result);
-    mysqli_free_result($result);
+    if ($admin_count == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
-    return $admin_count === 0;
+  function is_unique_question($question) {
+    $sql = "SELECT count(*) FROM faq ";
+    $sql .= "WHERE question = '" . h($question) . "';";
+
+    $count = db_count($sql);
+    if ($count == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function has_unique_id($id){
+    $sql = "SELECT count(*) from student ";
+    $sql .= "WHERE student_id = '" . h($id) . "';";
+
+    $count = db_count($sql);
+    if ($count == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function has_unique_email($email) {
+    $sql = "SELECT count(*) FROM student ";
+    $sql .= "WHERE student_email = '" . h($email) . "';";
+
+    $count = db_count($sql);
+    if ($count == 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 ?>
