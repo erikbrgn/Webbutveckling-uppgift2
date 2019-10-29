@@ -4,7 +4,6 @@ if (form) {
     var action = document.getElementById('action');
     action.addEventListener('change', function () {
         var value = this.options[this.selectedIndex].value;
-        console.log(value);
         if (value === '0') {
             form.querySelectorAll('.form-field.input, #form>.d-flex, .form-field.select, .form-field.textarea.textarea_answer').forEach(function (element) {
                 if (element.classList.contains('visually-hidden')) {
@@ -38,7 +37,7 @@ if (form) {
                 } else {
                     element.classList.add('visually-hidden');
                 }
-                
+
             });
         }
     });
@@ -47,6 +46,37 @@ if (form) {
 function toggleForm() {
     var form = document.getElementById('add_user_form');
     form.classList.toggle('visually-hidden');
+}
+
+function toggleComposeEmail() {
+    var form = document.getElementById('compose_email');
+    form.classList.toggle('visually-hidden');
+}
+
+function clearForm() {
+    var btn = document.getElementById('btn_reset');
+    if (btn) {
+        btn.addEventListener('click', function () {
+            var form = document.getElementById('compose_email');
+            if (form) {
+                document.querySelectorAll('form-field.input input, form-field.select select, form-field.textarea textarea').forEach(function (element) {
+                    element.value = '';
+                    element.focus();
+                    //element.blur();
+                });
+            }
+
+        });
+    }
+}
+
+function sendEmail() {
+    var form = document.getElementById('compose_email');
+    if (form) {
+        form.submit();
+        modal.modal('dispose');
+
+    }
 }
 
 function check(input, password_input) {

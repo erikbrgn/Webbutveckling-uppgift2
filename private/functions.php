@@ -42,6 +42,10 @@ function redirect_to($location) {
 function is_post_request() {
   return $_SERVER['REQUEST_METHOD'] == 'POST';
 }
+function strip_character ($string, $character) {
+  $string = str_replace($character, "", $string);
+  return $string;
+}
 
 function is_get_request() {
   return $_SERVER['REQUEST_METHOD'] == 'GET';
@@ -57,5 +61,24 @@ function display_errors($errors=array()) {
   return $output;
 }
 
+function compose_email($id, $email) {
+  $status = false;
+  $section_students = find_section_students($id);
+  $to = '';
+  foreach ($section_students as $student) {
+    $to .= $student['student_email'] . ", ";
+  }
+  $subject = $email['subject'];
+  $message = $email['message'];
+  $headers = 'MIME-Version: 1.0' . "\r\n" .
+    'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
+    'From: info@kanalkarneval.se' . "\r\n" .
+    'Reply-To: info@kanalkarneval.se' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
+  if (isset($email['subject']) && isset($email['message'])) {
+    $status = mail($to, $subject, $message, $headers);
+  }
+  return $status;
+}
 ?>

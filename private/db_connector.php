@@ -38,8 +38,12 @@
     function db_execute ($query) {
         $conn = db_connect();
 
+        try {
+
         $sth = $conn->prepare($query);
         $sth->execute();
+
+        } catch (PDOException $Exception) { echo $Exception; }
 
         return $sth;
     }

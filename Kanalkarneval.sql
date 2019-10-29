@@ -17,8 +17,8 @@ CREATE TABLE content_section (
     area_name varchar(255) NOT NULL,
     visible tinyint(1) DEFAULT 0,
     content text,
-    created_on DATETIME DEFAULT CURRENT_TIMESTAMP(),
-    updated_on DATETIME ON UPDATE CURRENT_TIMESTAMP(),
+    created_on DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_on DATETIME ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (section_id),
     UNIQUE (area_name)
 );
@@ -30,7 +30,7 @@ INSERT INTO content_section VALUES(1, 'main', 1, '<h2>Vart fjärde år...</h2>
             medium.</p>
         <p>Utan TV hade vi inte haft en identitet. Inga samtal om senaste Game of Thrones (vi vet, det är över)
             eller de senaste nyheterna</p>
-        <p>Det blir spex, tåg, tält, sol, sommar... men framförallt: <b>KANAL-SURFNING!</b></p>', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+        <p>Det blir spex, tåg, tält, sol, sommar... men framförallt: <b>KANAL-SURFNING!</b></p>', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO content_section VALUES(2, 'side', 1, '<h2>Evenemang</h2>
     <h3>Fredag 18 mars</h3>
@@ -52,7 +52,7 @@ INSERT INTO content_section VALUES(2, 'side', 1, '<h2>Evenemang</h2>
         <p>09:15 - 10:00<br>
             <b>Kom och se Spexet!</b>
             <p>
-    </div>', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+    </div>', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 DROP TABLE IF EXISTS section;
 CREATE TABLE section (
@@ -89,18 +89,18 @@ CREATE TABLE student (
 DROP TABLE IF EXISTS faq;
 CREATE TABLE faq (
     id int(11) NOT NULL AUTO_INCREMENT,
-    created_on DATETIME DEFAULT CURRENT_TIMESTAMP(),
+    created_on DATETIME DEFAULT CURRENT_TIMESTAMP,
     question varchar(255) NOT NULL,
     answer text,
     PRIMARY KEY (id),
     UNIQUE (question)
 );
 
-INSERT INTO faq VALUES (1, CURRENT_TIMESTAMP(), 'Hur är man karnevalist?', '<p>Jo, man är karnevalist genom att vara en Lundastudent och är sugen på att kröka.</p>');
-INSERT INTO faq VALUES (2, CURRENT_TIMESTAMP(), 'Hur hittar man till Karnevalen?', '<p>Gå till "Om Karnevalen" och sedan tryck på "Hitta hit". <a href="hitta-oss.html">Här är en länk ifall du inte
+INSERT INTO faq VALUES (1, CURRENT_TIMESTAMP, 'Hur är man karnevalist?', '<p>Jo, man är karnevalist genom att vara en Lundastudent och är sugen på att kröka.</p>');
+INSERT INTO faq VALUES (2, CURRENT_TIMESTAMP, 'Hur hittar man till Karnevalen?', '<p>Gå till \"Om Karnevalen\" och sedan tryck på \"Hitta hit\". <a href=\"hitta-oss.html\">Här är en länk ifall du inte
                 hittar.</a></p>');
-INSERT INTO faq VALUES (3, CURRENT_TIMESTAMP(), 'Varför måste man köa?', '<p>Sverige är uppbyggt med hjälp av kössystemet. Utan det hade vi fortfarande bott i grottor.</p>');
-INSERT INTO faq VALUES (4, CURRENT_TIMESTAMP(), 'Hur köar man?', '<p>Släng på dig en vuxenblöja (likt man gör på nyårsafton vid Times Square). Gå till Lundagård, still dig i kö
+INSERT INTO faq VALUES (3, CURRENT_TIMESTAMP, 'Varför måste man köa?', '<p>Sverige är uppbyggt med hjälp av kössystemet. Utan det hade vi fortfarande bott i grottor.</p>');
+INSERT INTO faq VALUES (4, CURRENT_TIMESTAMP, 'Hur köar man?', '<p>Släng på dig en vuxenblöja (likt man gör på nyårsafton vid Times Square). Gå till Lundagård, still dig i kö
             och håll ut! <br><small>Tips: Ta med dig en flaska Stroh för att hålla värmen.</small></p>');
 
 DROP TABLE IF EXISTS event;
@@ -109,6 +109,11 @@ CREATE TABLE event (
     number_of_seats int NOT NULL,
     PRIMARY KEY (event_name)
 );
+
+INSERT INTO event VALUES ('Spexet', 100);
+INSERT INTO event VALUES ('Dansen', 400);
+INSERT INTO event VALUES ('Revyn', 60);
+INSERT INTO event VALUES ('Kabarén', 100);
 
 ALTER TABLE reservation
 DROP FOREIGN KEY event_name;

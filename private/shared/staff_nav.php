@@ -14,7 +14,7 @@
         <li><a href="<?php echo url_for('/staff/karnevalister/index.php');?>">Karnevalister</a></li>
         <li><a href="<?php echo url_for('/staff/sektioner/index.php');?>">Sektioner</a></li>
         <li><a href="<?php echo url_for('/staff/faq/index.php');?>">FAQ</a></li>
-        <li><a href="<?php echo url_for('/staff/users/index.php');?>">Evenemang</a></li>
+        <li><a href="<?php echo url_for('/staff/evenemang/index.php');?>">Evenemang</a></li>
         <li><a href="<?php echo url_for('/staff/users/index.php');?>">Användare</a></li>
     </ul>
 

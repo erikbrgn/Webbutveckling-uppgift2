@@ -19,10 +19,35 @@ if(is_post_request()) {
 
         break;
         case 'view' :
+            if($_POST['view_action'] == '1') {
+                // UPDATE
+                $student['student_id'] = $_POST['student_id'] ?? '';
+                $student['student_email'] = $_POST['email'] ?? '';
+                $student['student_first_name'] = $_POST['first_name'] ?? '';
+                $student['student_surname'] = $_POST['last_name'] ?? '';
+                $student['student_phone_number'] = $_POST['telephone_number'] ?? '';
+                $student['student_section'] = $_POST['section'] ?? '';
 
-        // UPDATE STUDENT
-        // DELETE STUDENT
+                $result = update_student($student);
 
+                if ($result === true) {
+                    $errors[] = 'Studenten har uppdaterats.';
+                } else if ($result === false) {
+                    $errors[] = 'Studenten har inte uppdaterats.';
+                } else {
+                    $errors[] = $result;
+                }
+            } else if ($_POST['view_action'] == '2') {
+                $student['student_id'] = $_POST['student_id'] ?? '';
+                $result = delete_student($student);
+
+                if($result === true) {
+                    $errors[] = 'Studenten har blivit borttagen.';
+                    $student = [];
+                } else if ($result === false) {
+                    $errors[] = 'Oväntat fel. Studenten har inte blivit borttagen.';
+                }
+            }
         break;
 
     }
@@ -120,18 +145,18 @@ $students = get_all_students();
                     <label class="field-label" for="section">Önskad sektion</label>
                     <select name="section" required size=>
                         <option value selected></option>
-                        <option value="<?php echo 1; ?>" <?php if($student['section_id'] == 1) { ?> selected
-                            <?php } ?>>Administer IT</option>
-                        <option value="<?php echo 2; ?>" <?php if($student['section_id'] == 2) { ?> selected
-                            <?php } ?>>Biljonsen</option>
-                        <option value="<?php echo 3; ?>" <?php if($student['section_id'] == 3) { ?> selected
-                            <?php } ?>>Blädderiet</option>
-                        <option value="<?php echo 4; ?>" <?php if($student['section_id'] == 4) { ?> selected
-                            <?php } ?>>Dansen</option>
-                        <option value="<?php echo 5; ?>" <?php if($student['section_id'] == 5) { ?> selected
-                            <?php } ?>>Nöjen</option>
-                        <option value="<?php echo 6; ?>" <?php if($student['section_id'] == 6) { ?> selected
-                            <?php } ?>>Tåget</option>
+                        <option value="<?php echo 1; ?>" <?php if($student['section_id'] == 1) { ?> selected <?php } ?>>
+                            Administer IT</option>
+                        <option value="<?php echo 2; ?>" <?php if($student['section_id'] == 2) { ?> selected <?php } ?>>
+                            Biljonsen</option>
+                        <option value="<?php echo 3; ?>" <?php if($student['section_id'] == 3) { ?> selected <?php } ?>>
+                            Blädderiet</option>
+                        <option value="<?php echo 4; ?>" <?php if($student['section_id'] == 4) { ?> selected <?php } ?>>
+                            Dansen</option>
+                        <option value="<?php echo 5; ?>" <?php if($student['section_id'] == 5) { ?> selected <?php } ?>>
+                            Nöjen</option>
+                        <option value="<?php echo 6; ?>" <?php if($student['section_id'] == 6) { ?> selected <?php } ?>>
+                            Tåget</option>
                     </select>
                 </div>
                 <div class="form-field input visually-hidden">
@@ -158,7 +183,9 @@ $students = get_all_students();
                     <input type="tel" value="<?php echo h($student['student_phone_number']);?>" name="telephone_number"
                         required minlength="8" maxlength="10">
                 </div>
-                <input type="submit" value="Ansök">
+                <div class="d-flex visually-hidden">
+                    <input id="view_submit" type="submit" value="Lägg till">
+                </div>
             </form>
             <?php } else {?>
             <h2 class="mt-2"><?php echo $message; ?></h2>
@@ -166,4 +193,25 @@ $students = get_all_students();
         </div>
     </div>
 </div>
+ <!-- Modal -->
+ <div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="Confirmation" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-title">Bekräfta</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Du håller nu på att ta bort '<?php if (isset($student)) {echo $student['student_first_name'] . " " . $student['student_surname'];} ?>'.<br><br>
+                    Vill du fortsätta?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="k-btn k-btn-secondary" data-dismiss="modal">Avbryt</button>
+                    <button id="btn_confirm" type="button" class="k-btn k-btn-primary">Fortsätt</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php include(SHARED_PATH . '/staff_footer.php'); ?>
