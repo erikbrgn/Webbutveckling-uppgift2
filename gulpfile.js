@@ -5,12 +5,12 @@ var watch = require('gulp-watch');
 
 var paths = {
     styles: {
-        src: 'src/scss/*.scss',
-        dest: 'assets/css/'
+        src: 'public_html/src/scss/*.scss',
+        dest: 'public_html/assets/css/'
     },
     scripts: {
-        src: 'src/scripts/*.js',
-        dest: 'assets/scripts/'
+        src: 'public_html/src/scripts/*.js',
+        dest: 'public_html/assets/scripts/'
     }
 };
 
@@ -21,5 +21,5 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    return gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
+    return gulp.watch('public_html/src/scss/**/*.scss', gulp.series('sass'));
 });

@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+// @import url('https://fonts.googleapis.com/css?family=Gayathri|Open+Sans|Vibes&display=swap');
+
+@font-face {
+    font-family: Open Sans;
+    src: url('../fonts/opensans/opensans-regular.ttf');
+    font-display: swap;
+}
+@font-face {
+    font-family: Open Sans Bold;
+    src: url('../fonts/opensans/opensans-bold.ttf');
+    font-display: swap;
+}
+@font-face {
+    font-family: Vibes;
+    src: url('../fonts/vibes/vibes-regular.ttf');
+    font-display: swap;
+}
+@font-face {
+    font-family: Gayathri;
+    src: url('../fonts/gayathri/gayathri-regular.ttf');
+    font-display: swap;
+}
+
+/*
+Fonts:
+
+// Bread
+font-family: 'Open Sans', sans-serif;
+
+// Brand
+font-family: 'Vibes', cursive;
+
+// Headings
+font-family: 'Gayathri', sans-serif;
+ */
+
