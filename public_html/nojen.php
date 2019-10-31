@@ -17,19 +17,19 @@
             <li>Filmen</li>
         </ul>
         <div class=slideshow>
-            <div class="mySlideMain fade">
+            <div class="mySlideMain k-fade">
                 <img src="assets/img/Karneval2010063.jpg">
                 <div class="text-slideshow">Showen</div>
             </div>
-            <div class="mySlideMain fade">
+            <div class="mySlideMain k-fade">
                 <img src="assets/img/Karnevalen06 06.jpg">
                 <div class="text-slideshow">Operan?</div>
             </div>
-            <div class="mySlideMain fade">
+            <div class="mySlideMain k-fade">
                 <img src="assets/img/Karnevalen06 18.jpg">
                 <div class="text-slideshow">Cirkusen</div>
             </div>
-            <div class="mySlideMain fade">
+            <div class="mySlideMain k-fade">
                 <img src="assets/img/Karneval2010081.jpg">
                 <div class="text-slideshow">Kabarén</div>
             </div>
